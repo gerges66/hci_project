@@ -4,7 +4,8 @@ import 'package:hci_project/features/auth/view/register_view.dart';
 import 'package:hci_project/features/auth/view/widgets/custom_text_filed.dart';
 
 import '../../../constant/colors.dart';
-import '../../home/home_view.dart';
+import '../../../ui/home/home_screen.dart';
+
 import '../view_model/auth_cubit.dart';
 import '../view_model/auth_state.dart';
 import 'forget_password_view.dart';
@@ -21,7 +22,7 @@ class LoginView extends StatelessWidget {
           if (state is LoginSuccessState) {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => HomeView()),
+              MaterialPageRoute(builder: (context) =>  HomeScreen()),
             );
           }
           if (state is RegisterFailureState) {
